@@ -1,0 +1,70 @@
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: #f3f5f7;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.keyboard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.main-block {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 8px;
+}
+
+.nav-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.num-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.key {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    user-select: none;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.key:hover {
+    background-color: #e6ebff;
+}
+
+.key:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
+
+.back { grid-column: span 2; }
+.tab { grid-column: span 2; }
+.caps { grid-column: span 2; }
+.shift { grid-column: span 3; }
+.enter { grid-column: span 2; }
+.space { grid-column: span 7; }
+.ctrl { grid-column: span 2; }
+
+.num-plus { grid-row: span 2; }
+.num-enter { grid-row: span 2; }
+.num-zero { grid-column: span 2; }
+
+.empty {
+    background: transparent;
+    box-shadow: none;
+    cursor: default;
+}
