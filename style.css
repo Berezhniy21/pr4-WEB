@@ -1,6 +1,6 @@
 body {
     font-family: "Roboto Mono", monospace;
-    background-color: #f3f5f7;
+    background-color: #f2f4f6;
     text-align: center;
 }
 
@@ -9,62 +9,46 @@ h1 {
 }
 
 .keyboard {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(22, 1fr);
+    gap: 8px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.main-block {
-    display: grid;
-    grid-template-columns: repeat(15, 1fr);
-    gap: 8px;
-}
-
-.nav-block {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-}
-
-.num-block {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+.spacer {
+    background: transparent;
 }
 
 .key {
-    background: white;
+    background-color: #ffffff;
     padding: 12px;
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    user-select: none;
+
     cursor: pointer;
+    user-select: none;
     transition: 0.15s;
 }
 
+.wide {
+    grid-column: span 2;
+}
+
+.space {
+    grid-column: span 8;
+}
+
+.tall {
+    grid-row: span 2;
+}
+
 .key:hover {
-    background-color: #e6ebff;
+    background-color: #e6ecff;
 }
 
 .key:active {
     transform: translateY(2px);
     box-shadow: 0 2px 3px rgba(0,0,0,0.3);
-}
-
-.back { grid-column: span 2; }
-.tab { grid-column: span 2; }
-.caps { grid-column: span 2; }
-.shift { grid-column: span 3; }
-.enter { grid-column: span 2; }
-.space { grid-column: span 7; }
-.ctrl { grid-column: span 2; }
-
-.num-plus { grid-row: span 2; }
-.num-enter { grid-row: span 2; }
-.num-zero { grid-column: span 2; }
-
-.empty {
-    background: transparent;
-    box-shadow: none;
-    cursor: default;
+    background-color: #cdd9ff;
 }
